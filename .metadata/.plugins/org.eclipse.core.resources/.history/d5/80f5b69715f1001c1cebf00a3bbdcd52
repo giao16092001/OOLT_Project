@@ -1,0 +1,9 @@
+package main;
+
+public class MonsterSetter {
+	GamePanel gp;
+	public MonsterSetter() {
+		this.gp = gp;
+	}
+
+}

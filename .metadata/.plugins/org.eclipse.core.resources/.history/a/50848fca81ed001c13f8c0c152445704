@@ -1,0 +1,31 @@
+package main;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        JFrame window = new JFrame();
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setResizable(false);
+        window.setTitle("2D Boom Game");
+ 
+       
+        GamePanel gamePanel = new GamePanel();
+        window.add(gamePanel);
+        
+        window.pack(); 
+        
+        window.setLocationRelativeTo(null);
+        window.setVisible(true);
+        
+        gamePanel.startGameThread();
+       
+	}
+
+}

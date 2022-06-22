@@ -1,0 +1,11 @@
+package entity;
+
+import main.GamePanel;
+
+public class Quai_vat_1 extends Entity{
+       GamePanel gp;
+       
+       public Quai_vat_1(GamePanel gp) {
+    	   
+       }
+}

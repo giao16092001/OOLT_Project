@@ -1,0 +1,10 @@
+package background;
+
+import java.awt.Graphics2D;
+
+public class Background {
+	public void drawBackground(Graphics2D g2) {
+		
+	}
+
+}

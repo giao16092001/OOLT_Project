@@ -1,0 +1,38 @@
+package main;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+//class panel extends JPanel{
+//	protected void painBackground(Graphics g) {
+//		super.paintComponent(g);
+//		ImageIcon img = new ImageIcon("\background\background_Play.png");
+//		g.drawImage(img.getImage(), 768, 576, this.getWidth(),this.getHeight(), null);
+//	}
+//}
+public class Launcher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		Background panel = new ImagePanel(new ImageIcon("icon.png").getImage());
+        JFrame window = new JFrame();
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setResizable(false);
+        window.setTitle("2D Boom Game");
+        
+        
+        GamePanel gamePanel = new GamePanel();
+		window.add(gamePanel);
+//		panel pan = new panel();
+//        window.add(pan);
+        window.pack(); 
+        
+        window.setLocationRelativeTo(null);
+        window.setVisible(true);
+        
+        gamePanel.startGameThread();
+       
+	}
+
+}

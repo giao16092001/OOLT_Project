@@ -1,0 +1,92 @@
+package main;
+
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class Launcher {
+
+	public Launcher() {
+	      // Create a new JFrame container.
+	      JFrame jfrm = new JFrame("2D Boom Game");
+
+	      // Specify FlowLayout for the layout manager.
+	      jfrm.setLayout(new FlowLayout());
+
+	      // Give the frame an initial size.
+	      jfrm.setSize(220, 200);/*from  w  ww .j  a  v  a2s. c o m*/
+
+	      // Terminate the program when the user closes the application.
+	      jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	      // Create the menu bar.
+	      JMenuBar jmb = new JMenuBar();
+
+	      // Create the File menu.
+	      JMenu jmFile = new JMenu("File");
+	      jmFile.setMnemonic(KeyEvent.VK_F);
+
+	      JMenuItem jmiOpen = new JMenuItem("Open");
+
+	      JMenuItem jmiClose = new JMenuItem("Close", KeyEvent.VK_C);
+
+	      ImageIcon icon = new ImageIcon("SaveIcon.gif");
+	      JMenuItem jmiSave = new JMenuItem("Save", icon);
+	       
+	      
+	      JMenuItem jmiExit = new JMenuItem("Exit");
+	      jmFile.add(jmiOpen);
+	      jmFile.add(jmiClose);
+	      jmFile.add(jmiSave);
+	      jmFile.addSeparator();
+	      jmFile.add(jmiExit);
+	      jmb.add(jmFile);
+
+	      // Create the Help menu.
+	      JMenu jmHelp = new JMenu("Help");
+	      JMenuItem jmiAbout = new JMenuItem("About");
+	      jmHelp.add(jmiAbout);
+	      jmb.add(jmHelp);
+
+	      // Add action listeners for the menu items.
+	      jmiOpen.addActionListener((ActionListener) this);
+	      jmiClose.addActionListener((ActionListener) this);
+	      jmiSave.addActionListener((ActionListener) this);
+	      jmiExit.addActionListener((ActionListener) this);
+	      jmiAbout.addActionListener((ActionListener) this);
+
+	      // Add the menu bar to the frame.
+	      jfrm.setJMenuBar(jmb);
+
+	      // Display the frame.
+	      jfrm.setVisible(true);
+	   }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		Background panel = new ImagePanel(new ImageIcon("icon.png").getImage());
+        JFrame window = new JFrame();
+//        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        window.setResizable(false);
+//        window.setTitle("2D Boom Game");
+//     
+        GamePanel gamePanel = new GamePanel();
+		window.add(gamePanel);
+//        
+//        window.pack(); 
+//        
+//        window.setLocationRelativeTo(null);
+//        window.setVisible(true);
+//        
+        gamePanel.startGameThread();
+       
+	}
+
+}

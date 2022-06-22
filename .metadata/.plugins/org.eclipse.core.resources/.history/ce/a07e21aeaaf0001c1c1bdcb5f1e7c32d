@@ -1,0 +1,45 @@
+package entity;
+
+import java.util.Random;
+
+public class MoveMonster {
+		public boolean upPressed, downPressed, leftPressed, rightPressed;
+		
+        int code = (int) (Math.random()*(4)+1);
+
+		public void keyPressed() {
+            
+			if(code == 1) {
+				upPressed = true;
+			}
+	        if(code == 2) {
+	        	downPressed = true;
+			}
+	        if(code == 3) {
+	        	leftPressed = true;
+	        }
+	        if(code == 4) {
+	        	rightPressed = true;
+	        }
+			
+		}
+
+		
+		public void keyReleased() {
+			
+			if(code == 1) {
+				upPressed = false;
+			}
+	        if(code == 2) {
+	        	downPressed = false;
+			}
+	        if(code == 3) {
+	        	leftPressed = false;
+	        }
+	        if(code == 4) {
+	        	rightPressed = false;
+	        }
+		}
+
+
+}

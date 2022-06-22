@@ -1,0 +1,37 @@
+package main;
+
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		Background panel = new ImagePanel(new ImageIcon("icon.png").getImage());
+        JFrame window = new JFrame();
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setResizable(false);
+        window.setTitle("2D Boom Game");
+        
+        
+        GamePanel gamePanel = new GamePanel();
+		window.add(gamePanel);
+        
+        window.pack(); 
+        
+        window.setLocationRelativeTo(null);
+        window.setVisible(true);
+        
+        gamePanel.startGameThread();
+       
+	}
+
+}

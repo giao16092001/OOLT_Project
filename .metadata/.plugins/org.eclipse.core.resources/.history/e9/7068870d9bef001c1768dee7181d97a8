@@ -1,0 +1,11 @@
+package entity;
+
+import main.GamePanel;
+
+public class Monster_1 extends Entity{
+       GamePanel gp;
+       
+       public Monster_1(GamePanel gp) {
+    	   
+       }
+}
