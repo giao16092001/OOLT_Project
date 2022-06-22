@@ -11,17 +11,25 @@ import main.GamePanel;
 public class Entity {
 	
 	GamePanel gp;
-	public int x, y;
+	public int x;
+	public int y;
 	public int speed;
 	public BufferedImage up, down, left, right;
 	public String direction;
-	public Rectangle solidArea = new Rectangle(0, 0, 48, 48);
+	public Rectangle solidArea ;//= new Rectangle(0, 0, 48, 48);
 	public boolean collisionOn = false;
-	
+	public int actionCounter = 0;
 	public Entity(GamePanel gp) {
 		this.gp = gp;
 		
 	}
+	public void setAction() {
+		
+	}
+	public void update() {
+		
+	}
+	
 	public void draw(Graphics2D g2) {
 		BufferedImage image = null;
 		switch(direction) {

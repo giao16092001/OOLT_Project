@@ -1,5 +1,4 @@
 package main;
-
 import entity.Monster;
 
 public class MonsterSetter {
@@ -8,12 +7,9 @@ public class MonsterSetter {
 		this.gp = gp;
 	}
 	public void setMonster() {
-		gp.monster[0] = new Monster(gp);
-		gp.monster[0].x = 50;
-		gp.monster[0].y = 50;
-		gp.monster[1] = new Monster(gp);
-		gp.monster[1].y = 100;
-		gp.monster[1].x = 100;
+		gp.monster.add(new Monster(gp,325,325)) ;
+		gp.monster.add(new Monster(gp,300,0)) ;
+		gp.monster.add(new Monster(gp,0,300)) ;
 	}
 
 }

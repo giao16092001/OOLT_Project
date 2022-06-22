@@ -3,7 +3,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-
+import java.util.ArrayList;
 
 import javax.swing.JPanel;
 
@@ -23,16 +23,16 @@ public class GamePanel extends JPanel implements Runnable{
 	public int screenWidth = tileSize * maxScreenCol;//768 pixels
 	public int screenHeigh = tileSize * maxScreenRow;// 576 pixels
 	
-	public final int maxCol = 17;
-	public final int maxRow = 15;
-	public final int mWidth = tileSize * maxCol;
-	public final int mHeight = tileSize * maxRow;
+//	public final int maxCol = 17;
+//	public final int maxRow = 15;
+//	public final int mWidth = tileSize * maxCol;
+//	public final int mHeight = tileSize * maxRow;
 	
 	KeyHandler KeyH = new KeyHandler();
 	Thread gameThread;
 	public CollisionChecker cChecker = new CollisionChecker(this);
 	Player player = new Player(this, KeyH);
-    Entity monster[] = new Entity[10];
+	ArrayList<Entity> monster = new ArrayList<Entity>();;
 	
 	public MonsterSetter mSetter = new MonsterSetter(this);
 	//FPS(Frame Per Second)
@@ -84,14 +84,19 @@ public class GamePanel extends JPanel implements Runnable{
     	}
 	public void update() {
 		player.update();
+		for(int i = 0; i < monster.size(); i++) {
+			if(monster.get(i) != null) {
+				monster.get(i).update();
+			}
+		}
 	}
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D)g;
 		tileM.draw(g2);
-		for(int i=0; i < monster.length; i++) {
-			if(monster[i] != null) {
-				monster[i].draw(g2);
+		for(int i=0; i < monster.size(); i++) {
+			if(monster.get(i) != null) {
+				monster.get(i).draw(g2);
 			}
 		}
 		player.draw(g2);

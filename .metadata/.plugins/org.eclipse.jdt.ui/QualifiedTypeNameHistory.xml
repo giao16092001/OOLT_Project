@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
     <fullyQualifiedTypeName name="java.awt.Image"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="entity.CollisionChecker"/>
     <fullyQualifiedTypeName name="main.MonsterSetter"/>
     <fullyQualifiedTypeName name="java.awt.Graphics2D"/>
@@ -36,4 +35,5 @@
     <fullyQualifiedTypeName name="main.GamePanel"/>
     <fullyQualifiedTypeName name="java.awt.Rectangle"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>

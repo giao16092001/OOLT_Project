@@ -1,0 +1,17 @@
+package main;
+
+import entity.Entity;
+import entity.Monster;
+
+public class MonsterSetter {
+	GamePanel gp;
+	public MonsterSetter(GamePanel gp) {
+		this.gp = gp;
+	}
+	public void setMonster() {
+		gp.monster.add(new Monster(gp,100,100)) ;
+		gp.monster.add(new Monster(gp,200,100)) ;
+		gp.monster.add(new Monster(gp,100,100)) ;
+	}
+
+}
