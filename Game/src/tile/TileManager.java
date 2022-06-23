@@ -12,10 +12,8 @@ import main.GamePanel;
 public class TileManager {
 	GamePanel gp;
 	public Tile[] tile;
+	
 	public int mapTileNum[][];
-	
-	
-	
 	public TileManager(GamePanel gp) {
 		this.gp = gp;
 	    tile = new Tile[10];
@@ -74,8 +72,8 @@ public class TileManager {
 	}
 	public void draw(Graphics2D g2) {
 		g2.drawImage(tile[0].image,0,0,gp.screenWidth,gp.screenHeigh, null);
-	    int col = 0;
-	    int row = 0;
+		int col =0;
+		int row = 0;
 	    int x = 0;
 	    int y = 0;
 	    while(col < gp.maxScreenCol && row < gp.maxScreenRow) {

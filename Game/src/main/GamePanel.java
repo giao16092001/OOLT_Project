@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 import entity.Entity;
-import entity.Monster;
+import entity.Monster1;
 import entity.Player;
 import tile.TileManager;
 
@@ -22,11 +22,6 @@ public class GamePanel extends JPanel implements Runnable{
 	public int maxScreenRow = 13;
 	public int screenWidth = tileSize * maxScreenCol;//768 pixels
 	public int screenHeigh = tileSize * maxScreenRow;// 576 pixels
-	
-//	public final int maxCol = 17;
-//	public final int maxRow = 15;
-//	public final int mWidth = tileSize * maxCol;
-//	public final int mHeight = tileSize * maxRow;
 	
 	KeyHandler KeyH = new KeyHandler();
 	Thread gameThread;

@@ -8,11 +8,12 @@ import javax.imageio.ImageIO;
 
 import main.GamePanel;
 import main.KeyHandler;
+import tile.TileManager;
 
 public class Player extends Entity{
 	
 	KeyHandler KeyH;
-	
+	TileManager tileM = new TileManager(gp);
 	public Player(GamePanel gp,KeyHandler keyH) {
 		super(gp);
 		this.KeyH = keyH;
